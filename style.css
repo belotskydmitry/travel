@@ -1,0 +1,435 @@
+@font-face {
+    font-family: Magra;
+    src: url(../travel/assets/fonts/Magra/Magra-Regular.ttf);
+}
+
+@font-face {
+    font-family: Red_Hat_Text;
+    src: url(../travel/assets/fonts/Red_Hat_Text/static/RedHatText-Regular.ttf);
+}
+
+@font-face {
+    font-family: Aleo;
+    src: url(../travel/assets/fonts/Aleo/Aleo-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper-1 {
+    height: 765px;
+    background: url(../travel/assets/images/Wrapper-1.jpg);
+}
+
+.header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+}
+
+.header_logo {
+    width: 216px;
+    height: 31px;
+    margin-top: 25px;
+    margin-right: 158px;
+    margin-bottom: 34px;
+    margin-left: 121px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.header_logo a {
+    text-decoration: none;
+    font-family: Magra, sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+}
+
+.header_menu {
+    margin-top: 35px;
+    margin-bottom: 34px;
+    list-style: none;
+    display: flex;
+    gap: 42px;
+}
+
+.header_menu a {
+    text-decoration: none;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.header_menu a:hover {
+    color: #0D606F;
+    transition: all 0.3s;
+}
+
+.header_button button {
+    width: 103px;
+    height: 41px;
+    margin-top: 25px;
+    margin-right: 119px;
+    margin-bottom: 24px;
+    margin-left: 196px;
+    border: none;
+    border-radius: 10px;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.header_button button:hover {
+    cursor: pointer;
+    background: rgba(242, 120, 92, 0.7);
+    transition: all 0.3s;
+}
+
+.preview {
+    width: 892px;
+    height: 422px;
+    margin-top: 32px;
+    margin-right: 428px;
+    margin-bottom: 301px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview h1 {
+    margin: 0;
+    font-family: Aleo, sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+
+.preview p {
+    margin-bottom: 46px;
+    font-family: Aleo, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.preview_input {
+    width: 892px;
+    height: 95px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+}
+
+.preview_input input {
+    width: 560px;
+    height: 22px;
+    margin-top: 32px;
+    margin-right: 45px;
+    margin-bottom: 41px;
+    margin-left: 41px;
+    border: none;
+    outline: none;
+    font-family: Aleo, sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 29px;
+    background: transparent;
+}
+
+::-webkit-input-placeholder {
+    color: #F2785C;
+}
+
+.preview_input button {
+    width: 228px;
+    height: 59px;
+    margin-top: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    border: none;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.preview_input button:hover {
+    cursor: pointer;
+    background: rgba(242, 120, 92, 0.7);
+    transition: all 0.3s;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.steps {
+    width: 1177px;
+    height: 247px;
+    margin-top: 80px;
+    margin-right: 132px;
+    margin-bottom: 97px;
+    margin-left: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.steps h2 {
+    margin: 0;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.steps_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps_images figure {
+    width: 247px;
+    height: 154px;
+    text-align: center;
+    font-family: Aleo, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.steps_figure-1 {
+    margin-right: 231px;
+}
+
+.steps_figure-2 {
+    margin-right: 160px;
+}
+
+.destinations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destinations h2 {
+    margin-bottom: 46px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.destinations_images {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.destinations_images figure {
+    margin: 0;
+}
+
+.destinations_images img {
+    border-radius: 16px;
+}
+
+.destinations_images figcaption {
+    margin: 0;
+    position: relative;
+    bottom: 85px;
+    left: 15px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.destinations_pagination {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.destinations_button button {
+    width: 228px;
+    height: 59px;
+    margin-bottom: 80px;
+    border: none;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.destinations_button button:hover {
+    cursor: pointer;
+    background: rgba(242, 120, 92, 0.7);
+    transition: all 0.3s;
+}
+
+.wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../travel/assets/images/Wrapper-2.jpg);
+    background-size: cover;
+}
+
+.stories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.stories h2 {
+    margin-bottom: 73px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.stories_figures {
+    width: 1200px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 37px;
+}
+
+.stories_figures figure {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.stories_figures p {
+    margin: 0;
+}
+
+.stories_figures img {
+    border-radius: 16px;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+}
+
+.stories_figures h3 {
+    margin-top: 0;
+    font-family: Aleo, sans-serif;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+}
+
+.stories_figures figcaption p {
+    margin: 0;
+    font-family: Aleo, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.stories_figures figcaption a {
+    font-family: Aleo, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.stories_figures figcaption a:hover {
+    color: rgba(242, 120, 92, 0.7);
+    transition: all 0.3s;
+}
+
+.stories_button button {
+    width: 228px;
+    height: 59px;
+    margin-bottom: 55px;
+    border: none;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.stories_button button:hover {
+    cursor: pointer;
+    background: rgba(242, 120, 92, 0.7);
+    transition: all 0.3s;
+}
+
+.footer {
+    width: 729px;
+    margin-left: 590px;
+    margin-right: 121px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h4 {
+    font-family: Red_Hat_Text, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.footer_networks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
