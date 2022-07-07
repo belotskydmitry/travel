@@ -30,21 +30,22 @@ body {
 .header {
     height: 90px;
     display: flex;
+    justify-content: center;
     align-items: center;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
 .header_logo {
-    width: 216px;
-    height: 31px;
-    margin-top: 25px;
-    margin-right: 158px;
-    margin-bottom: 34px;
-    margin-left: 121px;
+    width: 16%;
+    margin: 25px 158px 34px 121px;
     display: flex;
     align-items: baseline;
     gap: 6px;
+}
+
+.header_logo p {
+    margin: 0;
 }
 
 .header_logo a {
@@ -56,10 +57,14 @@ body {
     color: #FFFFFF;
 }
 
+.header nav {
+    margin: auto;
+}
+
 .header_menu {
-    margin-top: 35px;
-    margin-bottom: 34px;
     list-style: none;
+    padding: 0;
+    margin: 35px 196px 34px 0px;
     display: flex;
     gap: 42px;
 }
@@ -81,10 +86,7 @@ body {
 .header_button button {
     width: 103px;
     height: 41px;
-    margin-top: 25px;
-    margin-right: 119px;
-    margin-bottom: 24px;
-    margin-left: 196px;
+    margin: 25px 119px 24px 0px;
     border: none;
     border-radius: 10px;
     background: #0D606F;
@@ -103,12 +105,8 @@ body {
 }
 
 .preview {
-    width: 892px;
-    height: 422px;
-    margin-top: 32px;
-    margin-right: 428px;
-    margin-bottom: 301px;
-    margin-left: 120px;
+    width: 62%;
+    margin: 32px 428px 221px 120px;
     display: flex;
     flex-direction: column;
 }
@@ -123,6 +121,7 @@ body {
 }
 
 .preview p {
+    margin-top: 25px;
     margin-bottom: 46px;
     font-family: Aleo, sans-serif;
     font-style: italic;
@@ -133,8 +132,7 @@ body {
 }
 
 .preview_input {
-    width: 892px;
-    height: 95px;
+    margin-bottom: 33px;
     border: none;
     display: flex;
     justify-content: space-between;
@@ -144,12 +142,8 @@ body {
 }
 
 .preview_input input {
-    width: 560px;
-    height: 22px;
-    margin-top: 32px;
-    margin-right: 45px;
-    margin-bottom: 41px;
-    margin-left: 41px;
+    width: 63%;
+    margin: auto 45px auto 41px;
     border: none;
     outline: none;
     font-family: Aleo, sans-serif;
@@ -166,13 +160,11 @@ body {
 .preview_input button {
     width: 228px;
     height: 59px;
-    margin-top: 18px;
-    margin-right: 18px;
-    margin-bottom: 18px;
+    margin: 18px 18px 18px 0px;
     border: none;
+    border-radius: 10px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border-radius: 10px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -195,12 +187,8 @@ body {
 }
 
 .steps {
-    width: 1177px;
-    height: 247px;
-    margin-top: 80px;
-    margin-right: 132px;
-    margin-bottom: 97px;
-    margin-left: 131px;
+    width: 100%;
+    margin: 80px 132px 97px 131px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -218,37 +206,42 @@ body {
 }
 
 .steps_images {
+    width: 82%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .steps_images figure {
-    width: 247px;
-    height: 154px;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.steps_images p {
+    margin: 0;
+}
+
+.steps_images figcaption {
     font-family: Aleo, sans-serif;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
 }
 
-.steps_figure-1 {
-    margin-right: 231px;
-}
-
-.steps_figure-2 {
-    margin-right: 160px;
-}
-
 .destinations {
+    margin-bottom: 173px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .destinations h2 {
-    margin-bottom: 46px;
+    margin: 0;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 40px;
@@ -257,14 +250,13 @@ body {
 }
 
 .destinations_images {
-    margin-bottom: 24px;
     display: flex;
-    justify-content: center;
     gap: 60px;
 }
 
 .destinations_images figure {
-    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .destinations_images img {
@@ -272,9 +264,8 @@ body {
 }
 
 .destinations_images figcaption {
-    margin: 0;
     position: relative;
-    bottom: 85px;
+    bottom: 65px;
     left: 15px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
@@ -292,11 +283,14 @@ body {
 .destinations_button button {
     width: 228px;
     height: 59px;
-    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border: none;
+    border-radius: 10px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border-radius: 10px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -311,20 +305,26 @@ body {
 }
 
 .wrapper-2 {
+    height: 1331px;
+    background: url(../travel/assets/images/Wrapper-2.jpg);
+}
+
+.wrapper-3 {
+    height: 1270px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(../travel/assets/images/Wrapper-2.jpg);
-    background-size: cover;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .stories {
+    width: 83%;
+    position: relative;
+    bottom: 102px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7);
 }
 
 .stories h2 {
@@ -337,16 +337,14 @@ body {
 }
 
 .stories_figures {
-    width: 1200px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 37px;
+    gap: 25px;
 }
 
 .stories_figures figure {
+    margin: 0;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -361,8 +359,9 @@ body {
     filter: drop-shadow(0px 4px 4px #0D606F);
 }
 
-.stories_figures h3 {
+.stories_figures figcaption h3 {
     margin-top: 0;
+    margin-bottom: 24px;
     font-family: Aleo, sans-serif;
     font-size: 35px;
     line-height: 42px;
@@ -370,7 +369,6 @@ body {
 }
 
 .stories_figures figcaption p {
-    margin: 0;
     font-family: Aleo, sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -379,7 +377,7 @@ body {
 
 .stories_figures figcaption a {
     font-family: Aleo, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
@@ -393,11 +391,14 @@ body {
 .stories_button button {
     width: 228px;
     height: 59px;
-    margin-bottom: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border: none;
+    border-radius: 10px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border-radius: 10px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 24px;
@@ -412,15 +413,15 @@ body {
 }
 
 .footer {
-    width: 729px;
-    margin-left: 590px;
-    margin-right: 121px;
+    width: 51%;
+    margin: 14px 121px 13px 590px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .footer h4 {
+    margin: 0;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -429,6 +430,7 @@ body {
 }
 
 .footer_networks {
+    margin: 0;
     list-style: none;
     display: flex;
     gap: 20px;
