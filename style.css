@@ -233,7 +233,7 @@ body {
 }
 
 .destinations {
-    margin-bottom: 173px;
+    margin-bottom: 151px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -247,6 +247,13 @@ body {
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
+}
+
+.destinations_slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .destinations_images {
@@ -320,7 +327,7 @@ body {
 .stories {
     width: 83%;
     position: relative;
-    bottom: 102px;
+    bottom: 81px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
