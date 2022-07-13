@@ -245,7 +245,7 @@ body {
 }
 
 .destinations {
-    margin-bottom: 151px;
+    margin-bottom: 172px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,15 +275,17 @@ body {
 
 .destinations_images figure {
     margin: 0 auto;
+    position: relative;
 }
 
 .destinations_images img {
+    display: block;
     border-radius: 16px;
 }
 
 .destinations_images figcaption {
-    position: relative;
-    bottom: 85px;
+    position: absolute;
+    bottom: 40px;
     left: 15px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
@@ -293,7 +295,7 @@ body {
 }
 
 .destinations_pagination {
-    margin-bottom: 40px;
+    margin: 25px auto 40px auto;
     display: flex;
     gap: 10px;
 }
@@ -357,13 +359,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background: rgba(255, 255, 255, 0.7);
 }
 
 .stories {
     width: 83%;
-    position: relative;
-    bottom: 85px;
+    position: absolute;
+    bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -489,11 +492,12 @@ body {
     .wrapper-1 {
         height: 251px;
         margin: 0 auto 20px auto;
-        border-radius: 24px 24px 0 0;
         background-size: cover;
+        background-position: center;
     }
 
     .header {
+        position: relative;
         background: none;
         box-shadow: none;
     }
@@ -507,16 +511,17 @@ body {
     }
 
     .header_burger-menu {
+        width: 110px;
+        height: 230px;
+        margin: 0;
+        padding: 10px 15px 20px 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        width: 100px;
-        height: 170px;
         position: fixed;
         top: 0;
         right: 0;
-        padding: 10px 15px 30px 30px;
         list-style: none;
         border-radius: 10px;
         background: #F2785C;
@@ -530,8 +535,9 @@ body {
     }
 
     .header_close-menu {
-        position: relative;
-        right: 95px;
+        position: absolute;
+        right: 115px;
+        bottom: 220px;
     }
 
    .header_burger-menu a {
@@ -594,12 +600,13 @@ body {
     }
 
     .steps_images {
+        align-items: flex-start;
         width: 92%;
-        gap: 50px;
+        gap: 75px;
     }
 
     .steps_images figure {
-        text-align: center;
+        align-items: flex-start;
         gap: 17px;
     }
 
@@ -609,12 +616,24 @@ body {
     }
 
     .steps_images figcaption {
-        font-size: 10px;
+        font-size: 9px;
         line-height: 12px;
     }
 
+    .steps_text-1 {
+        text-align: left;
+    }
+
+    .steps_text-2 {
+        text-align: center;
+    }
+
+    .steps_text-3 {
+        text-align: right;
+    }
+
     .destinations {
-        margin-bottom: 0;
+        margin-bottom: 49px;
     }
 
     .destinations h2 {
@@ -642,10 +661,14 @@ body {
         line-height: 26px;
     }
 
-    .destinations_pagination {
-        margin: 0px auto 31px auto;
+    .destinations_slider {
         position: relative;
-        bottom: 50px;
+    }
+
+    .destinations_pagination {
+        margin: 0;
+        position: absolute;
+        bottom: 12px;
         gap: 6px;
     }
 
@@ -659,8 +682,8 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        bottom: 205px;
+        position: absolute;
+        bottom: 70px;
     }
 
     .destinations_button img {
@@ -671,17 +694,16 @@ body {
     .destinations_button button {
         width: 92px;
         height: 30px;
+        margin-top: 9px;
         gap: 6px;
         font-size: 11px;
         line-height: 15px;
-        position: relative;
-        bottom: 125px;
     }
 
     .wrapper-2 {
         height: 693px;
-        border-radius: 0 0 22px 22px;
         background-size: cover;
+        background-position: center;
     }
 
     .wrapper-3 {
@@ -690,19 +712,19 @@ body {
 
     .stories {
         width: 97%;
-        bottom: 25px;
+        bottom: 14px;
     }
 
     .stories h2 {
-        margin-bottom: 20px;
+        margin-bottom: 21px;
         font-size: 14px;
         line-height: 19px;
     }
 
     .stories_figures {
         width: 95%;
-        margin-bottom: 10px;
-        gap: 15px;
+        margin: 0;
+        gap: 14px;
     }
 
     .stories_figures figure {
@@ -713,6 +735,7 @@ body {
     .stories_figures img {
         width: 155px;
         height: 130px;
+        display: block;
     }
 
     .stories_figures figcaption h3 {
@@ -727,7 +750,7 @@ body {
     }
 
     .stories_mobile-text {
-        display: inline-block;
+        display: block;
         font-family: Aleo, sans-serif;
         font-size: 9px;
         line-height: 11px;
@@ -747,6 +770,7 @@ body {
     .stories_button button {
         width: 92px;
         height: 30px;
+        margin-top: 10px;
         gap: 6px;
         font-size: 11px;
         line-height: 15px;
