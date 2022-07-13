@@ -23,10 +23,23 @@
                 <li><a href="#destinations-anchor">Destinations</a></li>
                 <li><a href="#stories-anchor">Travel Stories</a></li>
             </ul>
+            <ul class="header_burger-menu">
+                <li><a href="#" class="header_close-menu"><img src="../travel/assets/icons/close-menu.svg" alt="close-menu"></a></li>
+                <li><a href="#steps-anchor" class="header_link-how">How It Works</a></li>
+                <li><a href="#preview-anchor" class="header_link-plan">Plan Your Trip</a></li>
+                <li><a href="#destinations-anchor" class="header_link-destinations">Destinations</a></li>
+                <li><a href="#stories-anchor" class="header_link-stories">Travel Stories</a></li>
+                <li><a href="#" class="header_link-account">Account</a></li>
+                <li><a href="#footer-networks" class="header_link-social">Social Media</a></li>
+            </ul>
             </nav>
             <form action="#" method="post" class="header_button">
                 <button>Login</button>
             </form>
+            <div class="header_logo-burger">
+                <p><img src="../travel/assets/icons/logo.svg" alt="logo"></p>
+                <p class="header_burger"><img src="../travel/assets/icons/burger.svg" alt="burger"></p>
+            </div>
         </header>
 
         <section class="preview" id="preview-anchor">
@@ -62,23 +75,27 @@
             <h2>POPULAR DESTINATIONS</h2>
             <div class="destinations_slider">
                 <div class="destinations_images">
-                    <figure>
+                    <figure class="destinations_spain">
                         <img src="../travel/assets/images/Destination-1.jpg" alt="destination-1">
                         <figcaption>SPAIN</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="destinations_japan">
                         <img src="../travel/assets/images/Destination-2.jpg" alt="destination-2">
                         <figcaption>JAPAN</figcaption>
                     </figure>
-                    <figure>
+                    <figure class="destinations_usa">
                         <img src="../travel/assets/images/Destination-3.jpg" alt="destination-3">
                         <figcaption>USA</figcaption>
                     </figure>
                 </div>
                 <div class="destinations_pagination">
-                    <a href="#"><img src="../travel/assets/icons/dot-1.svg" alt="dot-1"></a>
-                    <a href="#"><img src="../travel/assets/icons/dot-2.svg" alt="dot-2"></a>
-                    <a href="#"><img src="../travel/assets/icons/dot-1.svg" alt="dot-1"></a>
+                    <div class="destinations_dot-1"></div>
+                    <div class="destinations_dot-2"></div>
+                    <div class="destinations_dot-3"></div>
+                </div>
+                <div class="destinations_pagination-mobile">
+                    <p><img src="../travel/assets/icons/arrow-left-red.svg" alt="arrow-left-red"></p>
+                    <p><img src="../travel/assets/icons/arrow-right-red.svg" alt="arrow-right-red"></p>
                 </div>
             </div>
             <form action="#" method="post" class="destinations_button">
@@ -89,18 +106,21 @@
 
         <div class="wrapper-2">
         <div class="wrapper-3">
-        <section class="stories">
+        <section class="stories" id="stories-anchor">
             <h2>TRAVEL STORIES</h2>
             <div class="stories_figures">
                 <figure>
                     <p><img src="../travel/assets/images/Thailand.jpg" alt="Thailand"></p>
                     <figcaption>
                         <h3>10 Photos of Attractive Thailand</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p class="stories_desktop-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <p class="stories_mobile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                         <a href="#">Read More</a>
                     </figcaption>
                 </figure>
@@ -108,11 +128,14 @@
                     <p><img src="../travel/assets/images/Utah.jpg" alt="Utah"></p>
                     <figcaption class="stories_figure_figcaption">
                         <h3>Canyonlands National Park, Utah</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p class="stories_desktop-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+                        <p class="stories_mobile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                         <a href="#">Read More</a>
                     </figcaption>
                 </figure>
@@ -120,11 +143,14 @@
                     <p><img src="../travel/assets/images/Mountains.jpg" alt="Mountains"></p>
                     <figcaption class="stories_figure_figcaption">
                         <h3>I left my heart in the Mountains!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p class="stories_desktop-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+                        <p class="stories_mobile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                         <a href="#">Read More</a>
                     </figcaption>
                 </figure>
@@ -132,11 +158,14 @@
                     <p><img src="../travel/assets/images/Longest.jpg" alt="Longest"></p>
                     <figcaption class="stories_figure_figcaption">
                         <h3>The Longest journey in my life!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p class="stories_desktop-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit... </p>
+                        <p class="stories_mobile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                         <a href="#">Read More</a>
                     </figcaption>
                 </figure>
@@ -149,7 +178,7 @@
 
         <footer class="footer">
             <h4>All Rights Reserved © Travel Portal</h4>
-            <ul class="footer_networks">
+            <ul class="footer_networks" id="footer-networks">
                 <li><a href="https://github.com/belotskydmitry" target="_blank"><img src="../travel/assets/icons/instagram.svg" alt="instagram"></a></li>
                 <li><a href="https://github.com/belotskydmitry" target="_blank"><img src="../travel/assets/icons/youtube.svg" alt="youtube"></a></li>
                 <li><a href="https://rs.school/js-stage0/" target="_blank"><img src="../travel/assets/icons/twitter.svg" alt="twitter"></a></li>

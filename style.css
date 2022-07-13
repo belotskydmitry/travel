@@ -58,7 +58,7 @@ body {
 }
 
 .header nav {
-    margin: auto;
+    margin: 0px auto 15px auto;
 }
 
 .header_menu {
@@ -83,10 +83,18 @@ body {
     transition: all 0.3s;
 }
 
+.header_burger-menu {
+    display: none;
+}
+
+.header_button {
+    margin-bottom: 10px;
+}
+
 .header_button button {
     width: 103px;
     height: 41px;
-    margin: 25px 119px 24px 0px;
+    margin: 25px 119px 25px 0px;
     border: none;
     border-radius: 10px;
     background: #0D606F;
@@ -102,6 +110,10 @@ body {
     cursor: pointer;
     background: rgba(242, 120, 92, 0.7);
     transition: all 0.3s;
+}
+
+.header_logo-burger {
+    display: none;
 }
 
 .preview {
@@ -188,7 +200,7 @@ body {
 
 .steps {
     width: 100%;
-    margin: 80px 132px 97px 131px;
+    margin: 74px 132px 45px 131px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -236,12 +248,12 @@ body {
     margin-bottom: 151px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .destinations h2 {
-    margin: 0;
+    margin: 48px auto 46px auto;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 40px;
@@ -252,7 +264,7 @@ body {
 .destinations_slider {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -262,8 +274,7 @@ body {
 }
 
 .destinations_images figure {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .destinations_images img {
@@ -272,7 +283,7 @@ body {
 
 .destinations_images figcaption {
     position: relative;
-    bottom: 65px;
+    bottom: 85px;
     left: 15px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
@@ -285,6 +296,31 @@ body {
     margin-bottom: 40px;
     display: flex;
     gap: 10px;
+}
+
+.destinations_dot-1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(242, 120, 92, 0.5);
+}
+
+.destinations_dot-2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #F2785C;
+}
+
+.destinations_dot-3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(242, 120, 92, 0.5);
+}
+
+.destinations_pagination-mobile {
+    display: none;
 }
 
 .destinations_button button {
@@ -327,7 +363,7 @@ body {
 .stories {
     width: 83%;
     position: relative;
-    bottom: 81px;
+    bottom: 85px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -335,7 +371,7 @@ body {
 }
 
 .stories h2 {
-    margin-bottom: 73px;
+    margin-bottom: 80px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 40px;
@@ -347,7 +383,7 @@ body {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 26px;
 }
 
 .stories_figures figure {
@@ -375,11 +411,15 @@ body {
     color: #0D606F;
 }
 
-.stories_figures figcaption p {
+.stories_desktop-text {
     font-family: Aleo, sans-serif;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+}
+
+.stories_mobile-text {
+    display: none;
 }
 
 .stories_figures figcaption a {
@@ -441,4 +481,287 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 390px) {
+    .wrapper-1 {
+        height: 251px;
+        margin: 0 auto 20px auto;
+        border-radius: 24px 24px 0 0;
+        background-size: cover;
+    }
+
+    .header {
+        background: none;
+        box-shadow: none;
+    }
+
+    .header_logo {
+        display: none;
+    }
+
+    .header_menu {
+        display: none;
+    }
+
+    .header_burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100px;
+        height: 170px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px 15px 30px 30px;
+        list-style: none;
+        border-radius: 10px;
+        background: #F2785C;
+        box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+        transform: translateX(100%);
+        transition: transform 0.8s;
+    }
+
+    .header_burger-menu.active {
+        transform: translateX(0);
+    }
+
+    .header_close-menu {
+        position: relative;
+        right: 95px;
+    }
+
+   .header_burger-menu a {
+        text-decoration: none;
+        font-family: Red_Hat_Text, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF;
+   }
+
+    .header_button {
+        display: none;
+    }
+
+    .header_logo-burger {
+        width: 92%;
+        margin: 90px 16px 60px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .preview {
+        width: 92%;
+        margin: 51px 16px 0px 15px;
+    }
+
+    .preview h1 {
+        display: none;
+    }
+
+    .preview p {
+        display: none;
+    }
+
+    .preview_input input {
+        width: 63%;
+        margin: auto 16px auto 16px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .preview_input button {
+        width: 92px;
+        height: 30px;
+        margin: 9px 9px 9px 0px;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .steps {
+        margin: 0px 15px 0px 15px;
+        gap: 20px;
+    }
+
+    .steps h2 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .steps_images {
+        width: 92%;
+        gap: 50px;
+    }
+
+    .steps_images figure {
+        text-align: center;
+        gap: 17px;
+    }
+
+    .steps_images img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .steps_images figcaption {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .destinations {
+        margin-bottom: 0;
+    }
+
+    .destinations h2 {
+        margin: 19px auto 20px auto;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .destinations_japan {
+        display: none;
+    }
+
+    .destinations_usa {
+        display: none;
+    }
+
+    .destinations_images img {
+        width: 360px;
+        height: 210px;
+    }
+
+    .destinations_images figcaption {
+        bottom: 205px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .destinations_pagination {
+        margin: 0px auto 31px auto;
+        position: relative;
+        bottom: 50px;
+        gap: 6px;
+    }
+
+    .destinations_dot-1, .destinations_dot-2, .destinations_dot-3 {
+        width: 8px;
+        height: 8px;
+    }
+
+    .destinations_pagination-mobile {
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: 205px;
+    }
+
+    .destinations_button img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .destinations_button button {
+        width: 92px;
+        height: 30px;
+        gap: 6px;
+        font-size: 11px;
+        line-height: 15px;
+        position: relative;
+        bottom: 125px;
+    }
+
+    .wrapper-2 {
+        height: 693px;
+        border-radius: 0 0 22px 22px;
+        background-size: cover;
+    }
+
+    .wrapper-3 {
+        height: 628px;
+    }
+
+    .stories {
+        width: 97%;
+        bottom: 25px;
+    }
+
+    .stories h2 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .stories_figures {
+        width: 95%;
+        margin-bottom: 10px;
+        gap: 15px;
+    }
+
+    .stories_figures figure {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .stories_figures img {
+        width: 155px;
+        height: 130px;
+    }
+
+    .stories_figures figcaption h3 {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .stories_desktop-text {
+        display: none;
+    }
+
+    .stories_mobile-text {
+        display: inline-block;
+        font-family: Aleo, sans-serif;
+        font-size: 9px;
+        line-height: 11px;
+        color: #0D606F;
+    }
+
+    .stories_figures figcaption a {
+        font-size: 9px;
+        line-height: 11px;
+    }
+
+    .stories_button img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .stories_button button {
+        width: 92px;
+        height: 30px;
+        gap: 6px;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .footer {
+        width: 36%;
+        margin: 0;
+    }
+
+    .footer h4 {
+        display: none;
+    }
+
+    .footer_networks {
+        margin: 15px 120px 16px 89px;
+    }
 }
