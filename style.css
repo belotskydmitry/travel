@@ -39,7 +39,6 @@ body {
 
 .header_logo {
     margin: 0;
-    width: 16%;
     display: flex;
     align-items: baseline;
     gap: 6px;
@@ -69,13 +68,13 @@ body {
 
 .header_menu {
     padding: 0;
-    margin: 0 10px 0 0;
+    margin: 0;
     list-style: none;
     display: flex;
 }
 
 .header_menu a {
-    margin: 0 22px;
+    margin-right: 42px;
     text-decoration: none;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
@@ -83,6 +82,10 @@ body {
     line-height: 21px;
     color: #FFFFFF;
     letter-spacing: 0.4px;
+}
+
+.header_menu li:last-child a {
+    margin-right: 26px;
 }
 
 .header_menu a:hover {
