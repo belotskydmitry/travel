@@ -1,16 +1,16 @@
 @font-face {
     font-family: Magra;
-    src: url(../travel/assets/fonts/Magra/Magra-Regular.ttf);
+    src: url(assets/fonts/Magra/Magra-Regular.ttf);
 }
 
 @font-face {
     font-family: Red_Hat_Text;
-    src: url(../travel/assets/fonts/Red_Hat_Text/static/RedHatText-Regular.ttf);
+    src: url(assets/fonts/Red_Hat_Text/static/RedHatText-Regular.ttf);
 }
 
 @font-face {
     font-family: Aleo;
-    src: url(../travel/assets/fonts/Aleo/Aleo-Regular.ttf);
+    src: url(assets/fonts/Aleo/Aleo-Regular.ttf);
 }
 
 html {
@@ -24,21 +24,22 @@ body {
 
 .wrapper-1 {
     height: 765px;
-    background: url(../travel/assets/images/Wrapper-1.jpg);
+    background: url(assets/images/Wrapper-1.jpg);
 }
 
 .header {
+    padding: 0 120px;
     height: 90px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
 .header_logo {
+    margin: 0;
     width: 16%;
-    margin: 25px 158px 34px 121px;
     display: flex;
     align-items: baseline;
     gap: 6px;
@@ -49,33 +50,39 @@ body {
 }
 
 .header_logo a {
+    margin-left: 2px;
+    margin-top: 2px;
     text-decoration: none;
     font-family: Magra, sans-serif;
     font-weight: 600;
     font-size: 32px;
     line-height: 39px;
     color: #FFFFFF;
+    display: block;
+    letter-spacing: 0.46px;
+    white-space: nowrap;
 }
 
 .header nav {
-    margin: 0px auto 15px auto;
+    display: flex;
 }
 
 .header_menu {
-    list-style: none;
     padding: 0;
-    margin: 35px 196px 34px 0px;
+    margin: 0 10px 0 0;
+    list-style: none;
     display: flex;
-    gap: 42px;
 }
 
 .header_menu a {
+    margin: 0 22px;
     text-decoration: none;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+    letter-spacing: 0.4px;
 }
 
 .header_menu a:hover {
@@ -87,14 +94,10 @@ body {
     display: none;
 }
 
-.header_button {
-    margin-bottom: 10px;
-}
-
 .header_button button {
     width: 103px;
     height: 41px;
-    margin: 25px 119px 25px 0px;
+    margin: auto;
     border: none;
     border-radius: 10px;
     background: #0D606F;
@@ -233,6 +236,10 @@ body {
     gap: 30px;
 }
 
+.steps_images figure:nth-child(2) {
+    flex: 1 1 100%;
+}
+
 .steps_images p {
     margin: 0;
 }
@@ -242,6 +249,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    white-space: nowrap;
 }
 
 .destinations {
@@ -351,7 +359,7 @@ body {
 
 .wrapper-2 {
     height: 1331px;
-    background: url(../travel/assets/images/Wrapper-2.jpg);
+    background: url(assets/images/Wrapper-2.jpg);
 }
 
 .wrapper-3 {
