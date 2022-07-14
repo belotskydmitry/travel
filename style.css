@@ -123,10 +123,13 @@ body {
 }
 
 .preview {
-    width: 62%;
-    margin: 32px 428px 221px 120px;
+    margin: 32px 0 0 120px;
     display: flex;
     flex-direction: column;
+}
+
+.preview > * {
+    max-width: 892px;
 }
 
 .preview h1 {
@@ -136,10 +139,11 @@ body {
     font-size: 80px;
     line-height: 96px;
     color: #FFFFFF;
+    letter-spacing: 0.8px;
 }
 
 .preview p {
-    margin-top: 25px;
+    margin-top: 32px;
     margin-bottom: 46px;
     font-family: Aleo, sans-serif;
     font-style: italic;
@@ -147,6 +151,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
+    letter-spacing: 0.06px;
 }
 
 .preview_input {
@@ -169,6 +174,7 @@ body {
     font-size: 24px;
     line-height: 29px;
     background: transparent;
+    letter-spacing: -0.6px;
 }
 
 ::-webkit-input-placeholder {
@@ -206,7 +212,7 @@ body {
 
 .steps {
     width: 100%;
-    margin: 74px 132px 45px 131px;
+    margin: 80px auto 44px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -221,6 +227,7 @@ body {
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
+    letter-spacing: 0.6px;
 }
 
 .steps_images {
@@ -233,14 +240,25 @@ body {
 .steps_images figure {
     margin: 0;
     display: flex;
+    justify-content: center;
+    flex: 1 1 33.3334%;
+}
+
+.steps_images figure:first-child {
+    justify-content: flex-start;
+}
+
+.steps_images figure:last-child {
+    justify-content: flex-end;
+}
+
+.steps_images div {
+    max-width: fit-content;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-}
-
-.steps_images figure:nth-child(2) {
-    flex: 1 1 100%;
+    gap: 28px;
 }
 
 .steps_images p {
@@ -264,12 +282,13 @@ body {
 }
 
 .destinations h2 {
-    margin: 48px auto 46px auto;
+    margin: 52px auto 44px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
+    letter-spacing: 0.6px;
 }
 
 .destinations_slider {
@@ -375,7 +394,7 @@ body {
 }
 
 .stories {
-    width: 83%;
+    padding: 0 120px;
     position: absolute;
     bottom: 40px;
     display: flex;
@@ -385,19 +404,21 @@ body {
 }
 
 .stories h2 {
-    margin-bottom: 80px;
+    margin: auto auto 72px;
     font-family: Red_Hat_Text, sans-serif;
     font-weight: 500;
     font-size: 40px;
     line-height: 53px;
     color: #F2785C;
+    letter-spacing: 0.6px;
+    font-weight: 500;
 }
 
 .stories_figures {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 24px;
 }
 
 .stories_figures figure {
