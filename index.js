@@ -122,45 +122,45 @@ slider.addEventListener('click', e => {
 })*/
 
 const slider = document.querySelector('.destinations_images')
-const pagination = document.querySelector('.destinations_pagination')
+            const pagination = document.querySelector('.destinations_pagination')
 
-function setSlide (active) {
-    const widthOneSlide = document.querySelector('figure').clientWidth
-    const gapWidth = getComputedStyle(document.querySelector('.destinations_images')).gap
+            function setSlide (active) {
+                const widthOneSlide = document.querySelector('.destinations_images > figure').clientWidth
+                const gapWidth = getComputedStyle(document.querySelector('.destinations_images')).gap
 
-    const value = widthOneSlide + parseInt(gapWidth)
+                const value = widthOneSlide + parseInt(gapWidth)
 
-    document.querySelector('.dot.active').classList.remove('active')
-    document.querySelector('figure.active').classList.remove('active')
+                document.querySelector('.dot.active').classList.remove('active')
+                document.querySelector('figure.active').classList.remove('active')
 
-    document.querySelector(`.dot[data-slide="${active}"]`).classList.add('active')
-    document.querySelector(`figure[data-slide="${active}"]`).classList.add('active')
+                document.querySelector(`.dot[data-slide="${active}"]`).classList.add('active')
+                document.querySelector(`figure[data-slide="${active}"]`).classList.add('active')
 
                 
 
-    document.querySelector('.destinations_images').style.left = `${active * value}px`
-}
+                document.querySelector('.destinations_images').style.left = `${active * value}px`
+            }
 
-pagination.addEventListener('click', e => {
+            pagination.addEventListener('click', e => {
                 
-    if (e.target.dataset && e.target.dataset.slide) {
-        const active = e.target.dataset.slide
+                if (e.target.dataset && e.target.dataset.slide) {
+                    const active = e.target.dataset.slide
 
                     
-        if (e.target.classList.contains('active')) return false
+                    if (e.target.classList.contains('active')) return false
 
-        setSlide(parseInt(active))
-    }
-})
+                    setSlide(parseInt(active))
+                }
+            })
 
-slider.addEventListener('click', e => {
+            slider.addEventListener('click', e => {
                 
-    if (e.target.closest('figure')) {
-        const active = parseInt(e.target.closest('figure').dataset.slide)
+                if (e.target.closest('figure')) {
+                    const active = parseInt(e.target.closest('figure').dataset.slide)
 
                     
-        if (e.target.closest('figure').classList.contains('active')) return false
+                    if (e.target.closest('figure').classList.contains('active')) return false
 
-        setSlide(parseInt(active))
-    }
-})
+                    setSlide(parseInt(active))
+                }
+            })
