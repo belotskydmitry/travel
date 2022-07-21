@@ -271,6 +271,9 @@ body {
 .destinations_images {
     display: flex;
     gap: 60px;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
 }
 
 .destinations_images figure {

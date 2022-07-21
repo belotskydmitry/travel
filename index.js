@@ -36,3 +36,52 @@ headerLinkAccount.addEventListener('click', function() {
 headerLinkSocial.addEventListener('click', function() {
     headerBurgerMenu.classList.toggle('active');
 })
+
+
+
+let offset = 0;
+const destinationsImages = document.querySelector('.destinations_images');
+
+document.querySelector('.destinations_dot-1').addEventListener('click', function() {
+    offset += 850;
+    if (offset > 850) {
+        offset = 0;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
+
+document.querySelector('.destinations_dot-2').addEventListener('click', function() {
+    offset += 850;
+    if (offset > 850) {
+        offset = 0;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
+document.querySelector('.destinations_dot-3').addEventListener('click', function() {
+    offset -= 850;
+    if (offset < 0) {
+        offset = -850;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
+document.querySelector('.destinations_spain').addEventListener('click', function() {
+    offset += 850;
+    if (offset > 850) {
+        offset = 0;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
+document.querySelector('.destinations_japan').addEventListener('click', function() {
+    offset += 850;
+    if (offset > 850) {
+        offset = 0;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
+document.querySelector('.destinations_usa').addEventListener('click', function() {
+    offset -= 850;
+    if (offset < 0) {
+        offset = -850;
+    }
+    destinationsImages.style.left = offset + 'px';
+})
