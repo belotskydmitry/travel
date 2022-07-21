@@ -635,14 +635,6 @@ body {
         line-height: 19px;
     }
 
-    .active {
-        display: none;
-    }
-
-    .destinations_usa {
-        display: none;
-    }
-
     .destinations_images img {
         width: 360px;
         height: 210px;
@@ -671,6 +663,7 @@ body {
     }
 
     .destinations_pagination-mobile {
+        max-width: 90vw;
         width: 97%;
         display: flex;
         justify-content: space-between;
