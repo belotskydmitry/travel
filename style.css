@@ -303,25 +303,15 @@ body {
     gap: 10px;
 }
 
-.destinations_dot-1 {
+.dot {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background: rgba(242, 120, 92, 0.5);
 }
 
-.destinations_dot-2 {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.dot.active {
     background: #F2785C;
-}
-
-.destinations_dot-3 {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgba(242, 120, 92, 0.5);
 }
 
 .destinations_pagination-mobile {
@@ -645,7 +635,7 @@ body {
         line-height: 19px;
     }
 
-    .destinations_japan {
+    .destinations_japan-active {
         display: none;
     }
 
@@ -675,7 +665,7 @@ body {
         gap: 6px;
     }
 
-    .destinations_dot-1, .destinations_dot-2, .destinations_dot-3 {
+    .dot, .dot.active {
         width: 8px;
         height: 8px;
     }
