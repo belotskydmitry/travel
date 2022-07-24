@@ -33,7 +33,7 @@
                 <li><a href="#footer-networks" class="header_link-social">Social Media</a></li>
             </ul>
             </nav>
-            <form action="#" method="post" class="header_button">
+            <form action="#" class="header_button">
                 <button>Login</button>
             </form>
             <div class="header_logo-burger">
@@ -94,8 +94,8 @@
                     <div class="dot" data-slide="-1"></div>
                 </div>
                 <div class="destinations_pagination-mobile">
-                    <p><img src="../travel/assets/icons/arrow-left-red.svg" alt="arrow-left-red"></p>
-                    <p><img src="../travel/assets/icons/arrow-right-red.svg" alt="arrow-right-red"></p>
+                    <p class="prev arrow"><img src="../travel/assets/icons/arrow-right-red.svg" alt="arrow-left-red"></p>
+                    <p class="next arrow"><img src="../travel/assets/icons/arrow-right-red.svg" alt="arrow-right-red"></p>
                 </div>
             </div>
             <form action="#" method="post" class="destinations_button">
@@ -184,6 +184,56 @@
                 <li><a href="https://rs.school/js-stage0/" target="_blank"><img src="../travel/assets/icons/twitter.svg" alt="twitter"></a></li>
             </ul>
         </footer>
+        </div>
+
+        <div class="pop-up hidden">
+            <div class="pop-up_content">
+                <h2>Log in to your account</h2>
+                <form action="#" method="post">
+                    <button class="button_facebook"><img src="../travel/assets/icons/facebook.svg" alt="facebook"><span>Sign In with Facebook</span></button>
+                </form>
+                <form action="#" method="post">
+                    <button class="button_google"><img src="../travel/assets/icons/google.svg" alt="google"><span>Sign In with Google</span></button>
+                </form>
+                <h6><img src="../travel/assets/icons/line.svg" alt="line1"> or <img src="../travel/assets/icons/line.svg" alt="line2"></h6>
+                <form action="#" method="post" class="input-email">
+                    <p>E-mail<br>
+                        <input type="text" name="email" class="input-email_text">
+                    </p>
+                </form>
+                <form action="#" method="post" class="input-password">
+                    <p>Password<br>
+                        <input type="password" name="password" class="input-password_text">
+                    </p>
+                </form>
+                <form action="#" method="post">
+                    <button class="button_sign-in">Sign In</button>
+                </form>
+                <p class="forgot-password"><a href="#">Forgot Your Password?</a></p>
+                <p class="underline" ><img src="../travel/assets/icons/line-2.svg" alt="line2"></p>
+                <p class="register">Don't have an account?<a href="#" class="register_button">Register</a></p>
+            </div>
+        </div>
+
+        <div class="pop-up2 hidden">
+            <div class="pop-up_content-2">
+                <h2>Create account</h2>
+                <form action="#" method="post" class="input-email">
+                    <p>E-mail<br>
+                        <input type="text" name="email">
+                    </p>
+                </form>
+                <form action="#" method="post" class="input-password">
+                    <p>Password<br>
+                        <input type="password" name="password">
+                    </p>
+                </form>
+                <form action="#" method="post">
+                    <button class="button_sign-up">Sign Up</button>
+                </form>
+                <p class="underline" ><img src="../travel/assets/icons/line-2.svg" alt="line2"></p>
+                <p class="login">Already have an account?<a href="#">Log In</a></p>
+            </div>
         </div>
 
         <script src="../travel/index.js"></script>    

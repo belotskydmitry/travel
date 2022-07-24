@@ -37,8 +37,6 @@ headerLinkSocial.addEventListener('click', function() {
     headerBurgerMenu.classList.toggle('active');
 })
 
-
-
 /*let offset = 0;
 const destinationsImages = document.querySelector('.destinations_images');
 
@@ -121,46 +119,110 @@ slider.addEventListener('click', e => {
     }
 })*/
 
-const slider = document.querySelector('.destinations_images')
-            const pagination = document.querySelector('.destinations_pagination')
+const slider = document.querySelector('.destinations_images');
+const pagination = document.querySelector('.destinations_pagination');
+const mobilePagination = document.querySelector('.destinations_pagination-mobile');
 
-            function setSlide (active) {
-                const widthOneSlide = document.querySelector('.destinations_images > figure').clientWidth
-                const gapWidth = getComputedStyle(document.querySelector('.destinations_images')).gap
+function setSlide (active) {
+    const widthOneSlide = document.querySelector('.destinations_images > figure').clientWidth;
+    const gapWidth = getComputedStyle(document.querySelector('.destinations_images')).gap;
+    const value = widthOneSlide + parseInt(gapWidth);
 
-                const value = widthOneSlide + parseInt(gapWidth)
+    document.querySelector('.dot.active').classList.remove('active');
+    document.querySelector('figure.active').classList.remove('active');
 
-                document.querySelector('.dot.active').classList.remove('active')
-                document.querySelector('figure.active').classList.remove('active')
+    document.querySelector(`.dot[data-slide="${active}"]`).classList.add('active');
+    document.querySelector(`figure[data-slide="${active}"]`).classList.add('active');
 
-                document.querySelector(`.dot[data-slide="${active}"]`).classList.add('active')
-                document.querySelector(`figure[data-slide="${active}"]`).classList.add('active')
+    switch (active) {
+        case -1:
+            document.querySelector('.arrow.next').classList.add('disable');
+            break
+        case 1:
+            document.querySelector('.arrow.prev').classList.add('disable');
+            break
+        default:
+            if (document.querySelector('.arrow.disable'))
+                document.querySelector('.arrow.disable').classList.remove('disable');
+    }
 
+    document.querySelector('.destinations_images').style.left = `${active * value}px`;
+}
+
+pagination.addEventListener('click', e => {
                 
+    if (e.target.dataset && e.target.dataset.slide) {
+        const active = e.target.dataset.slide;
+ 
+    if (e.target.classList.contains('active')) return false;
+        setSlide(active);
+    }
+})
 
-                document.querySelector('.destinations_images').style.left = `${active * value}px`
-            }
-
-            pagination.addEventListener('click', e => {
+slider.addEventListener('click', e => {
                 
-                if (e.target.dataset && e.target.dataset.slide) {
-                    const active = e.target.dataset.slide
+    if (e.target.closest('figure')) {
+        const active = parseInt(e.target.closest('figure').dataset.slide);
 
-                    
-                    if (e.target.classList.contains('active')) return false
+    if (e.target.closest('figure').classList.contains('active')) return false;
+        setSlide(active);
+    }
+})
 
-                    setSlide(parseInt(active))
-                }
-            })
-
-            slider.addEventListener('click', e => {
+mobilePagination.addEventListener('click', e => {
+    let active = parseInt(document.querySelector('figure.active').dataset.slide);
                 
-                if (e.target.closest('figure')) {
-                    const active = parseInt(e.target.closest('figure').dataset.slide)
+    if (e.target.closest('.prev.arrow:not(.disable)')) {
+        const prev = ++active;
+        setSlide(prev);
+    }
 
-                    
-                    if (e.target.closest('figure').classList.contains('active')) return false
+    if (e.target.closest('.next.arrow:not(.disable)')) {
+        const next = --active;
+        setSlide(next);
+    }
+})
 
-                    setSlide(parseInt(active))
-                }
-            })
+window.addEventListener('resize', () => setSlide(0));
+
+const headerButton = document.querySelector('.header_button');
+const popup = document.querySelector('.pop-up');
+const popup2 = document.querySelector('.pop-up2');
+
+const signInButton = document.querySelector('.button_sign-in');
+let inputEmail = document.querySelector('.input-email_text');
+let inputPassword = document.querySelector('.input-password_text');
+
+const registerButton = document.querySelector('.register_button');
+
+/*const accountButton = document.querySelector('.header_link-account');*/
+
+headerButton.addEventListener('click', () => {
+    popup.classList.toggle('hidden');
+})
+
+popup.addEventListener('click', (event) => {
+    if (event.target.classList.contains('pop-up')) {
+        popup.classList.toggle('hidden');
+    }
+})
+
+signInButton.addEventListener('click', () => {
+    alert(`Login: ${inputEmail.value}`);
+    alert(`Password: ${inputPassword.value}`);
+})
+
+registerButton.addEventListener('click', () => {
+    popup.classList.toggle('hidden');
+    popup2.classList.toggle('hidden');
+})
+
+popup2.addEventListener('click', (event) => {
+    if (event.target.classList.contains('pop-up2')) {
+        popup2.classList.toggle('hidden');
+    }
+})
+
+/*accountButton.addEventListener('click', () => {
+    popup.classList.toggle('hidden');
+})*/
