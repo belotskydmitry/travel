@@ -491,6 +491,12 @@ body {
     visibility: hidden;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .pop_up {
     width: 100%;
     height: 100%;
@@ -503,9 +509,20 @@ body {
     background-color: rgba(20, 20, 20, 0.3);
 }
 
+.pop-up_overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .35);
+}
+
 .pop-up_content {
     width: 650px;
     height: 660px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -688,6 +705,10 @@ body {
 .pop-up_content-2 {
     width: 650px;
     height: 436px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1035,5 +1056,124 @@ body {
 
     .footer_networks {
         margin: 15px 120px 16px 89px;
+    }
+    
+    .pop-up_content {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .pop-up_content h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+        line-height: 19px;
+    }
+    
+    .button_facebook {
+        width: 250px;
+        margin-bottom: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .button_facebook span {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .button_google {
+        width: 250px;
+        margin-bottom: 15px;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .button_google span {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .pop-up_content h6 {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .pop-up_content h6 img {
+        width: 45%;
+    }
+    
+    .input-email p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .input-email input{
+        width: 250px;
+        height: 25px;
+    }
+    
+    .input-password p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .input-password input{
+        width: 250px;
+        height: 25px;
+    }
+    
+    .button_sign-in {
+        width: 250px;
+        height: 35px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .forgot-password {
+        margin-bottom: 10px;
+    }
+    
+    .forgot-password a {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .underline {
+        margin: 0 auto 10px auto;
+    }
+
+    .underline img {
+        width: 100%;
+    }
+    
+    .register {
+        margin: 0 auto 15px auto;
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .pop-up_content-2 {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .pop-up_content-2 h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .button_sign-up {
+        width: 250px;
+        height: 35px;
+        margin: 0 auto 20px auto;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    
+    .login {
+        margin: 0 auto 20px auto;
+        font-size: 10px;
+        line-height: 15px;
     }
 }

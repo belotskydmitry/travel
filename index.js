@@ -1,6 +1,7 @@
 'use strict'
 console.log('Вёрстка валидная +10\nВёрстка семантическая +20\nВёрстка соответствует макету +48\nТребования к css + 12\nИнтерактивность, реализуемая через css +20');
 console.log('Вёрстка соответствует макету. Ширина экрана 390px +48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\nНа ширине экрана 390рх и меньше реализовано адаптивное меню +22');
+console.log('Слайдер изображений в секции destinations +50\nНажатие на кнопку Login (кнопка Account в мобильной версии) показывает сверстанный логин попап + 50\nНажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение). +25');
 
 let headerBurger = document.querySelector('.header_burger');
 let headerBurgerMenu = document.querySelector('.header_burger-menu');
@@ -152,7 +153,7 @@ function setSlide (active) {
 pagination.addEventListener('click', e => {
                 
     if (e.target.dataset && e.target.dataset.slide) {
-        const active = e.target.dataset.slide;
+        const active = parseInt(e.target.dataset.slide);
  
     if (e.target.classList.contains('active')) return false;
         setSlide(active);
@@ -195,21 +196,20 @@ let inputPassword = document.querySelector('.input-password_text');
 
 const registerButton = document.querySelector('.register_button');
 
-/*const accountButton = document.querySelector('.header_link-account');*/
+const accountButton = document.querySelector('.header_link-account');
 
 headerButton.addEventListener('click', () => {
     popup.classList.toggle('hidden');
 })
 
 popup.addEventListener('click', (event) => {
-    if (event.target.classList.contains('pop-up')) {
+    if (event.target.classList.contains('pop-up_overlay')) {
         popup.classList.toggle('hidden');
     }
 })
 
 signInButton.addEventListener('click', () => {
-    alert(`Login: ${inputEmail.value}`);
-    alert(`Password: ${inputPassword.value}`);
+    alert(`Login: ${inputEmail.value}\nPassword: ${inputPassword.value}`);
 })
 
 registerButton.addEventListener('click', () => {
@@ -218,11 +218,18 @@ registerButton.addEventListener('click', () => {
 })
 
 popup2.addEventListener('click', (event) => {
-    if (event.target.classList.contains('pop-up2')) {
+    if (event.target.classList.contains('pop-up_overlay')) {
         popup2.classList.toggle('hidden');
     }
 })
 
-/*accountButton.addEventListener('click', () => {
+function stopDefAction(evt) {
+    evt.preventDefault();
+}
+
+headerButton.addEventListener('click', stopDefAction, false);
+signInButton.addEventListener('click', stopDefAction, false);
+
+accountButton.addEventListener('click', () => {
     popup.classList.toggle('hidden');
-})*/
+})
